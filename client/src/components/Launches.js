@@ -28,11 +28,9 @@ class Launches extends Component {
             return (
               <Fragment>
                 <MissionKey />
-                {data &&
-                  data.launches &&
-                  data.launches.map(launch => (
-                    <LaunchItem key={launch.flight_number} launch={launch} />
-                  ))}
+                {data.launches.map(launch => (
+                  <LaunchItem key={launch.flight_number} launch={launch} />
+                ))}
               </Fragment>
             );
           }}
